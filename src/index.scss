@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Space+Grotesk:wght@500&display=swap');
+@import './sass/vars';
 *,
 *::after,
 *::before {
@@ -8,4 +10,8 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: $font-main;
 }
