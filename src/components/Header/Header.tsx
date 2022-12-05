@@ -2,6 +2,7 @@ import Navigation from '../Navigation/Navigation'
 import s from './Header.module.scss'
 
 import cat from '../../assets/cat-6664412_640.jpg'
+import logo from '../../assets/logo_icf-warsaw-large.png'
 
 const Header = () => {
   return (
@@ -12,6 +13,11 @@ const Header = () => {
         backgroundPosition: 'center',
       }}
       className={s.header}>
+      <img
+        className={s.header__logo}
+        src={logo}
+        alt='International Christian Fellowship logo'
+      />
       <Navigation />
       <h1 className={s.header__heading}>
         <span className={s['header__heading--primary']}>
