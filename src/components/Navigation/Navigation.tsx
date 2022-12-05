@@ -1,3 +1,5 @@
+
+import Burger from '../../models/UI/Burger/Burger'
 import NavItem from './NavItem/NavItem'
 
 const Navigation = () => {
@@ -30,6 +32,7 @@ const Navigation = () => {
   const contactLinks = ['Contact', 'Facebook', 'Instagram']
   return (
     <nav>
+        <Burger/>
       <ul>
         <NavItem title='Home' />
         <NavItem title='About us' links={aboutUsLinks} />
