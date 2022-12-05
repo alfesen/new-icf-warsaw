@@ -1,11 +1,20 @@
 import s from './Burger.module.scss'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Burger = () => {
+const Burger = ({ onToggle }: { onToggle: (isActive: boolean) => void }) => {
   const [isActive, setIsActive] = useState(false)
+
+  const toggleBurger = () => {
+    setIsActive(is => !is)
+  }
+
+  useEffect(() => {
+    onToggle(isActive)
+  }, [isActive])
+
   return (
     <button
-      onClick={() => setIsActive(is => !is)}
+      onClick={toggleBurger}
       className={`${s.hamburger} ${s['hamburger--spring']} ${
         isActive ? s['is-active'] : ''
       }`}>
