@@ -1,5 +1,12 @@
+import Header from './components/Header/Header'
+import vars from './index.scss'
 function App() {
-  return <div>HELLO WORLD</div>
+  console.log(vars)
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
 
 export default App
