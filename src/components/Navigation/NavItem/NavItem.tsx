@@ -12,7 +12,11 @@ const NavItem = (props: Props) => {
       {links && (
         <div>
           {links.map(link => {
-            return <a href={`/${link}`}>{link}</a>
+            return (
+              <a key={`${link.replace(' ', '')}_link`} href={`/${link}`}>
+                {link}
+              </a>
+            )
           })}
         </div>
       )}
