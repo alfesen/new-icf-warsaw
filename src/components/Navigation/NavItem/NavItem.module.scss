@@ -3,8 +3,9 @@
 .item {
   padding: 0.3em 0;
   cursor: pointer;
-  &__link {
-    padding: 0.3em 0;
+  &__link,
+  a {
+    padding: 0;
     display: block;
     &--span {
       display: inline-block;
@@ -13,10 +14,6 @@
     &:hover {
       color: #e3e3e3;
     }
-  }
-  &__collection {
-    padding: 0.5em 0 0 1.5em;
-    animation: slide-in 0.3s ease-out;
   }
 }
 
@@ -27,5 +24,18 @@
 
   to {
     translate: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .item {
+    position: relative;
+
+    &__link {
+      padding: 0.5em 1em;
+      &--span {
+        display: none;
+      }
+    }
   }
 }

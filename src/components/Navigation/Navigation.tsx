@@ -43,7 +43,6 @@ const Navigation = () => {
       </div>
       <nav className={`${s.navigation} ${isActive ? s.show : ''}`}>
         <ul className={s.navigation__list}>
-          <NavItem title='Home' />
           <NavItem title='About us' links={aboutUsLinks} />
           <NavItem title='Church Life' links={churchLifeLinks} />
           <NavItem title='Give' links={giveLinks} />
