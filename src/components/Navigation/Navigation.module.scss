@@ -4,6 +4,7 @@
   right: 0;
   top: 0;
   height: 100vh;
+  width: 26rem;
   overflow-y: auto;
   overflow-x: hidden;
   text-align: left;
@@ -11,7 +12,6 @@
   text-transform: uppercase;
   font-size: 1.6rem;
   background-color: $color-dark-grey;
-  width: 26rem;
   z-index: 10;
   color: $color-basic;
   text-align: right;
@@ -26,7 +26,7 @@
   }
   &__list {
     margin-top: 5rem;
-    text-align-last: left;
+    text-align: left;
     list-style: none;
     li:last-child {
       margin-top: 1em;
@@ -38,6 +38,7 @@
     transition: all 0.3s;
     font-weight: 500;
     transition: color 0.2s;
+    z-index: 1;
     &:hover {
       color: $color-dark-grey;
     }
@@ -60,5 +61,58 @@
   }
   &.show {
     translate: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .navigation {
+    translate: 0;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    justify-content: flex-end;
+    height: 8rem;
+    margin-top: 3rem;
+    width: 85%;
+    max-width: 700px;
+    background: none;
+    font-size: 1.4rem;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: -1;
+      filter: blur(5rem);
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      li:last-child {
+        margin-top: 0;
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navigation {
+    font-size: 1.6rem;
+    max-width: 900px;
+    &__list {
+      li:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
   }
 }

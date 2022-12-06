@@ -1,4 +1,7 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
+import { useOutsideClick } from '../../../hooks/useOutsideClick'
+import { useClientWidth } from '../../../hooks/useClientWidth'
+import NavDropdown from './NavDropdown'
 import s from './NavItem.module.scss'
 
 type Props = {
@@ -8,41 +11,37 @@ type Props = {
 
 const NavItem = (props: Props) => {
   const { title, links } = props
+  const { width } = useClientWidth()
 
-  const [drop, setDrop] = useState(false)
+  const desktop = width > 700
+  let drop = false
 
+  const { ref, visible, setVisible } = useOutsideClick(drop)
   const isDropped = drop ? '-' : `+`
   const titleQuery = title.replace(' ', '').toLowerCase()
-
-  const dropdownLinks = drop && (
-    <div className={s.item__collection}>
-      {links &&
-        links.map(link => {
-          const linkQuery = link.replace(' ', '').toLowerCase()
-          return (
-            <a
-              className={s.item__link}
-              key={`${link.replace(' ', '')}_link`}
-              href={`/${linkQuery}`}>
-              {link}
-            </a>
-          )
-        })}
-    </div>
-  )
+  const dropdownLinks = visible && links && <NavDropdown links={links} />
 
   const handleDrop = () => {
-    setDrop(drop => !drop)
+    setVisible(drop => !drop)
   }
 
+  const dropdownMedia = desktop ? (
+    <p className={s.item__link} onMouseEnter={handleDrop}>
+      <span className={s['item__link--span']}>{isDropped}</span>&nbsp;
+      {title}
+    </p>
+  ) : (
+    <p className={s.item__link} onClick={handleDrop}>
+      <span className={s['item__link--span']}>{isDropped}</span>&nbsp;
+      {title}
+    </p>
+  )
+
   return (
-    <li className={s.item}>
+    <li ref={ref} className={s.item}>
       {links ? (
         <Fragment>
-          <p className={s.item__link} onClick={handleDrop}>
-            <span className={s['item__link--span']}>{isDropped}</span>&nbsp;
-            {title}
-          </p>
+          {dropdownMedia}
           {dropdownLinks}
         </Fragment>
       ) : (

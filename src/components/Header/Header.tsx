@@ -1,23 +1,40 @@
+import { useState, useEffect } from 'react'
 import Navigation from '../Navigation/Navigation'
 import s from './Header.module.scss'
 
 import cat from '../../assets/cat-6664412_640.jpg'
+import bigCat from '../../assets/cat-4218424_1920.jpg'
 import logo from '../../assets/logo_icf-warsaw-large.png'
 
 const Header = () => {
+  const [width, setWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handler = () => {
+      setWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handler)
+
+    return () => window.removeEventListener('resize', handler)
+  }, [])
+
   return (
     <div
       style={{
-        background: `linear-gradient(#00000044, #00000044), url(${cat}) no-repeat`,
+        backgroundImage: `url(${width < 700 ? cat : bigCat})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
       }}
       className={s.header}>
-      <img
-        className={s.header__logo}
-        src={logo}
-        alt='International Christian Fellowship logo'
-      />
+      <div className='shadow'></div>
+      <a className={s.header__logo} href='/home'>
+        <img
+          className={s['header__logo--img']}
+          src={logo}
+          alt='International Christian Fellowship logo'
+        />
+      </a>
       <Navigation />
       <h1 className={s.header__heading}>
         <span className={s['header__heading--primary']}>

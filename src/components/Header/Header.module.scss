@@ -2,28 +2,80 @@
 
 .header {
   position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
+  background-repeat: no-repeat;
   &__logo {
+    position: relative;
+    cursor: pointer;
     padding: 2em;
     width: 10rem;
+    z-index: 5;
+    transition: scale 0.1s;
+    height: max-content;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #000;
+      filter: blur(6rem);
+    }
+    &--img {
+      width: 100%;
+    }
+    &:hover {
+      scale: 1.1;
+    }
   }
   &__heading {
     position: absolute;
     width: 100%;
     text-align: center;
+    font-weight: 400;
     top: 60%;
+    font-size: 2.5rem;
     color: $color-basic;
 
     span {
       display: block;
     }
     &--primary {
-      font-size: 2rem;
       text-transform: uppercase;
     }
     &--secondary {
-      font-size: 1.8rem;
+      font-family: $font-quirky;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .header {
+    &__heading {
+      font-size: 3rem;
+    }
+    &__logo {
+      width: 14rem;
+      margin: 2em;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__heading {
+      font-size: 5rem;
+    }
+    &__logo {
+      width: 20rem;
+      margin: 3em;
     }
   }
 }
