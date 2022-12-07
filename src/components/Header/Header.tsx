@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useClientWidth } from '../../hooks/useClientWidth'
 import Navigation from '../Navigation/Navigation'
 import s from './Header.module.scss'
 
@@ -7,17 +7,7 @@ import bigCat from '../../assets/cat-4218424_1920.jpg'
 import logo from '../../assets/logo_icf-warsaw-large.png'
 
 const Header = () => {
-  const [width, setWidth] = useState(window.innerWidth)
-
-  useEffect(() => {
-    const handler = () => {
-      setWidth(window.innerWidth)
-    }
-
-    window.addEventListener('resize', handler)
-
-    return () => window.removeEventListener('resize', handler)
-  }, [])
+  const {width} = useClientWidth()
 
   return (
     <div
