@@ -8,7 +8,6 @@ import logo from '../../assets/logo_icf-warsaw-large.png'
 
 const Header = () => {
   const {width} = useClientWidth()
-
   return (
     <div
       style={{

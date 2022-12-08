@@ -25,6 +25,12 @@ a {
   }
 }
 
+.container {
+  min-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .shadow {
   position: absolute;
   width: 100%;
