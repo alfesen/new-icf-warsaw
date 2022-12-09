@@ -42,7 +42,6 @@ a {
   background-color: $shadow;
 }
 
-
 h1 {
   font-size: $font-main-header-sm;
 }
@@ -50,6 +49,7 @@ h1 {
 h2,
 h3 {
   color: $color-dark-grey;
+  font-size: $font-tertiary-header-sm;
   text-align: center;
   margin-bottom: 1em;
 }
@@ -66,6 +66,9 @@ h2 {
   h2 {
     font-size: $font-secondary-header-md;
   }
+  h3 {
+    font-size: $font-tertiary-header-md;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -74,5 +77,8 @@ h2 {
   }
   h2 {
     font-size: $font-secondary-header-lg;
+  }
+  h3 {
+    font-size: $font-tertiary-header-sm;
   }
 }
