@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400&family=Satisfy&display=swap');
 @import './sass/vars';
 *,
 *::after,
@@ -28,7 +28,7 @@ a {
 .container {
   max-width: 1200px;
   width: 90%;
-  margin: 0 auto;
+  margin: 3em auto 0;
 }
 
 .shadow {
@@ -41,3 +41,16 @@ a {
   bottom: 0;
   background-color: $shadow;
 }
+
+h2,
+h3 {
+  color: $color-dark-grey;
+  text-align: center;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: $font-md;
+  font-weight: 400;
+}
+
