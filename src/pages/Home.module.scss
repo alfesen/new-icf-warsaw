@@ -1,6 +1,7 @@
 @media (min-width: 900px) {
   .home {
-    display: flex;
-    margin-top: 8em;
+    &__top {
+      margin-top: 8em;
+    }
   }
 }
