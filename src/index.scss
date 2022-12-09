@@ -28,7 +28,7 @@ a {
 .container {
   max-width: 1200px;
   width: 90%;
-  margin: 0 auto;
+  margin: 3em auto 0;
 }
 
 .shadow {
@@ -41,6 +41,7 @@ a {
   bottom: 0;
   background-color: $shadow;
 }
+
 h2,
 h3 {
   color: $color-dark-grey;
@@ -49,18 +50,7 @@ h3 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: $font-md;
   font-weight: 400;
 }
 
-p {
-  font-size: 1.4rem;
-  color: $color-light-grey;
-  font-weight: 400;
-  span {
-    color: $color-dark-grey;
-    font-weight: 700;
-    opacity: .8;
-    font-style: italic;
-  }
-}

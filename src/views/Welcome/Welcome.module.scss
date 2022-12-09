@@ -1,0 +1,20 @@
+@import '../../sass/vars';
+
+.welcome {
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  &__text {
+    color: $color-light-grey;
+    font-size: $font-sm;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 1.5em;
+    span {
+      color: $color-dark-grey;
+      opacity: .85;
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+}
