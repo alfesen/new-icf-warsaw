@@ -30,7 +30,6 @@
     text-align: center;
     font-weight: 400;
     top: 60%;
-    font-size: 2.5rem;
     color: $color-basic;
     span {
       display: block;
@@ -46,9 +45,6 @@
 
 @media (min-width: 700px) {
   .header {
-    &__heading {
-      font-size: 3rem;
-    }
     &__logo {
       width: 14rem;
       margin: 2em;
@@ -58,9 +54,6 @@
 
 @media (min-width: 1200px) {
   .header {
-    &__heading {
-      font-size: 5rem;
-    }
     &__logo {
       width: 20rem;
       margin: 3em;

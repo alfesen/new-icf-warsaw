@@ -2,8 +2,6 @@
 
 .welcome {
   max-width: 70rem;
-  display: flex;
-  flex-direction: column;
   &__text {
     color: $color-light-grey;
     font-size: $font-sm;
@@ -15,6 +13,14 @@
       opacity: 0.85;
       font-weight: 700;
       font-style: italic;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .welcome {
+    &__text {
+      width: 100%;
     }
   }
 }

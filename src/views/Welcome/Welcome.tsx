@@ -1,11 +1,9 @@
-import Announcements from '../Announcements/Announcements'
 import s from './Welcome.module.scss'
 
 const Welcome = () => {
   return (
     <section className={`container ${s.welcome}`}>
       <h2 className={s.welcome__heading}>Welcome to ICF Warsaw</h2>
-      <div className={s.welcome__description}>
         <p className={s.welcome__text}>
           The International Christian Fellowship of Warsaw is an
           English-speaking church that worships Jesus Christ as Lord and Savior
@@ -20,8 +18,7 @@ const Welcome = () => {
           curious as to who we are, we invite you to come and join us. We would
           love to meet you!
         </p>
-        <Announcements />
-      </div>
+      
     </section>
   )
 }
