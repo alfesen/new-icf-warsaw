@@ -5,6 +5,7 @@
   cursor: pointer;
   &__link,
   a {
+    color: $color-basic;
     padding: 0;
     display: block;
     &--span {
