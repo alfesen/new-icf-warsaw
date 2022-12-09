@@ -1,11 +1,14 @@
-import { Fragment } from "react"
-import Welcome from "../views/Welcome/Welcome"
+import s from './Home.module.scss'
+
+import Announcements from '../views/Announcements/Announcements'
+import Welcome from '../views/Welcome/Welcome'
 
 const Home = () => {
   return (
-    <Fragment>
+    <div className={s.home}>
       <Welcome />
-    </Fragment>
+      <Announcements />
+    </div>
   )
 }
 
