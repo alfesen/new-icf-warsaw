@@ -3,6 +3,8 @@
 .announcements {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 6em 0 0;
   text-align: center;
   padding: 3em;
@@ -10,15 +12,12 @@
 
 @media (min-width: 900px) {
   .announcements {
-    display: flex;
-    width: 50%;
     margin-left: 2em;
   }
 }
 
 @media (min-width: 900px) {
   .announcements {
-    width: 40%;
-    padding: 1em 2em;
+    padding: 2em;
   }
 }
