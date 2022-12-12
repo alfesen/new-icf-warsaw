@@ -5,11 +5,11 @@ const NavDropdown = ({ links }: { links: string[] }) => {
     <div className={s.links}>
       {links &&
         links.map(link => {
-          const linkQuery = link.replace(' ', '').toLowerCase()
+          const linkQuery = link.replaceAll(' ', '').toLowerCase()
           return (
             <a
               className={s.link}
-              key={`${link.replace(' ', '')}_link`}
+              key={`${link.replaceAll(' ', '')}_link`}
               href={`/${linkQuery}`}>
               {link}
             </a>

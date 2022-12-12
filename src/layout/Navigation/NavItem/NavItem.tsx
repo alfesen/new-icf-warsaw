@@ -18,7 +18,7 @@ const NavItem = (props: Props) => {
 
   const { ref, visible, setVisible } = useOutsideClick(drop)
   const isDropped = drop ? '-' : `+`
-  const titleQuery = title.replace(' ', '').toLowerCase()
+  const titleQuery = title.replaceAll(' ', '').toLowerCase()
   const dropdownLinks = visible && links && <NavDropdown links={links} />
 
   const handleDrop = () => {
