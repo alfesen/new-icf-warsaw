@@ -5,16 +5,25 @@ import Welcome from '../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
 import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
 import UsefulLinks from '../components/HomeComponents/UsefulLinks/UsefulLinks'
+import { Fade } from 'react-reveal'
 
 const Home = () => {
   return (
     <Fragment>
       <div className={s.home__top}>
-        <Welcome />
-        <Announcements />
+        <Fade up>
+          <Welcome />
+        </Fade>
+        <Fade up>
+          <Announcements />
+        </Fade>
       </div>
-      <Shortcuts />
-      <UsefulLinks />
+      <Fade up>
+        <Shortcuts />
+      </Fade>
+      <Fade up>
+        <UsefulLinks />
+      </Fade>
     </Fragment>
   )
 }
