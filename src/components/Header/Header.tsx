@@ -4,10 +4,10 @@ import s from './Header.module.scss'
 
 import cat from '../../assets/cat-6664412_640.jpg'
 import bigCat from '../../assets/cat-4218424_1920.jpg'
-import logo from '../../assets/logo_icf-warsaw-large.png'
+import Logo from '../../models/UI/Logo/Logo'
 
 const Header = () => {
-  const {width} = useClientWidth()
+  const { width } = useClientWidth()
   return (
     <div
       style={{
@@ -17,13 +17,7 @@ const Header = () => {
       }}
       className={s.header}>
       <div className='shadow'></div>
-      <a className={s.header__logo} href='/home'>
-        <img
-          className={s['header__logo--img']}
-          src={logo}
-          alt='International Christian Fellowship logo'
-        />
-      </a>
+      <Logo className={s.header__logo} />
       <Navigation />
       <h1 className={s.header__heading}>
         <span className={s['header__heading--primary']}>
