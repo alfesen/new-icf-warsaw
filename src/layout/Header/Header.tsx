@@ -6,6 +6,7 @@ import cat from '../../assets/cat-6664412_640.jpg'
 import bigCat from '../../assets/cat-4218424_1920.jpg'
 import Logo from '../../UI/Logo/Logo'
 import MainHeading from './MainHeading/MainHeading'
+import Shadow from '../../UI/Shadow/Shadow'
 
 const Header = () => {
   const { width } = useClientWidth()
@@ -17,7 +18,7 @@ const Header = () => {
         backgroundPosition: 'top',
       }}
       className={s.header}>
-      <div className='shadow'></div>
+      <Shadow />
       <Logo className={s.header__logo} />
       <Navigation />
       <MainHeading />
