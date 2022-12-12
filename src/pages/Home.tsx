@@ -5,7 +5,7 @@ import Welcome from '../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
 import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
 import UsefulLinks from '../components/HomeComponents/UsefulLinks/UsefulLinks'
-import { Fade } from 'react-reveal'
+import Fade from 'react-reveal/Fade'
 
 const Home = () => {
   return (
