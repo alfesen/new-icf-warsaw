@@ -1,5 +1,5 @@
 import s from './Announcements.module.scss'
-import Card from '../../models/UI/Card/Card'
+import Card from '../../../UI/Card/Card'
 
 const Announcements = () => {
   return (

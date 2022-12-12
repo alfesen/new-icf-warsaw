@@ -1,5 +1,5 @@
 import s from './Logo.module.scss'
-import logo from '../../../assets/logo_icf-warsaw-large.png'
+import logo from '../../assets/logo_icf-warsaw-large.png'
 
 const Logo = ({ className }: { className?: string }) => {
   return (
