@@ -1,0 +1,17 @@
+@use '../../../sass/mixins' as m;
+
+.logo {
+  position: relative;
+  cursor: pointer;
+  padding: 2em;
+  z-index: 5;
+  transition: scale 0.1s;
+  height: max-content;
+  @include m.blur(6rem);
+  &--img {
+    width: 100%;
+  }
+  &:hover {
+    scale: 1.1;
+  }
+}
