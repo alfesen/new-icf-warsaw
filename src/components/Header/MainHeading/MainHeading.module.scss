@@ -1,0 +1,19 @@
+@import '../../../sass/vars';
+
+.main-heading {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  top: 60%;
+  color: $color-basic;
+  span {
+    display: block;
+  }
+  &--primary {
+    text-transform: uppercase;
+  }
+  &--secondary {
+    font-family: $font-quirky;
+  }
+}

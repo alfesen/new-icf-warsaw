@@ -5,6 +5,7 @@ import s from './Header.module.scss'
 import cat from '../../assets/cat-6664412_640.jpg'
 import bigCat from '../../assets/cat-4218424_1920.jpg'
 import Logo from '../../models/UI/Logo/Logo'
+import MainHeading from './MainHeading/MainHeading'
 
 const Header = () => {
   const { width } = useClientWidth()
@@ -19,14 +20,7 @@ const Header = () => {
       <div className='shadow'></div>
       <Logo className={s.header__logo} />
       <Navigation />
-      <h1 className={s.header__heading}>
-        <span className={s['header__heading--primary']}>
-          WELCOME TO ICF WARSAW
-        </span>
-        <span className={s['header__heading--secondary']}>
-          Find your way...
-        </span>
-      </h1>
+      <MainHeading />
     </div>
   )
 }
