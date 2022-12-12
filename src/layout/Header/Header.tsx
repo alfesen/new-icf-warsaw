@@ -4,7 +4,7 @@ import s from './Header.module.scss'
 
 import cat from '../../assets/cat-6664412_640.jpg'
 import bigCat from '../../assets/cat-4218424_1920.jpg'
-import Logo from '../../models/UI/Logo/Logo'
+import Logo from '../../UI/Logo/Logo'
 import MainHeading from './MainHeading/MainHeading'
 
 const Header = () => {

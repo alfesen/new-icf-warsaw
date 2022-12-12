@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import s from './Navigation.module.scss'
-import Burger from '../../models/UI/Burger/Burger'
+import Burger from '../../UI/Burger/Burger'
 import NavItem from './NavItem/NavItem'
 
 const Navigation = () => {

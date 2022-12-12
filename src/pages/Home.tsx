@@ -1,9 +1,9 @@
 import s from './Home.module.scss'
 
-import Announcements from '../views/Announcements/Announcements'
-import Welcome from '../views/Welcome/Welcome'
+import Announcements from '../components/HomeComponents/Announcements/Announcements'
+import Welcome from '../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
-import Shortcuts from '../views/Shortcuts/Shortcuts'
+import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
 
 const Home = () => {
   return (
