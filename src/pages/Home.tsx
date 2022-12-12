@@ -4,6 +4,7 @@ import Announcements from '../components/HomeComponents/Announcements/Announceme
 import Welcome from '../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
 import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
+import UsefulLinks from '../components/HomeComponents/UsefulLinks/UsefulLinks'
 
 const Home = () => {
   return (
@@ -12,9 +13,8 @@ const Home = () => {
         <Welcome />
         <Announcements />
       </div>
-      <div className={s.home__shortcuts}>
-        <Shortcuts />
-      </div>
+      <Shortcuts />
+      <UsefulLinks />
     </Fragment>
   )
 }

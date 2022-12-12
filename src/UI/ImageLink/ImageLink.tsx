@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 type Props = {
   className?: string
   image: string
-  text: string
+  text?: string
 }
 
 const ImageLink = (props: Props) => {
