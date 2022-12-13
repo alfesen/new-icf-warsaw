@@ -5,25 +5,25 @@ import Welcome from '../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
 import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
 import UsefulLinks from '../components/HomeComponents/UsefulLinks/UsefulLinks'
-import Fade from 'react-reveal/Fade'
+import { Slide } from 'react-awesome-reveal'
 
 const Home = () => {
   return (
     <Fragment>
       <div className={s.home__top}>
-        <Fade up>
+        <Slide direction='up' triggerOnce={true}>
           <Welcome />
-        </Fade>
-        <Fade up>
+        </Slide>
+        <Slide direction='up' triggerOnce={true}>
           <Announcements />
-        </Fade>
+        </Slide>
       </div>
-      <Fade up>
+      <Slide direction='up' triggerOnce={true}>
         <Shortcuts />
-      </Fade>
-      <Fade up>
+      </Slide>
+      <Slide direction='up' triggerOnce={true}>
         <UsefulLinks />
-      </Fade>
+      </Slide>
     </Fragment>
   )
 }
