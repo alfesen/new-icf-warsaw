@@ -1,3 +1,6 @@
+@use '../../../sass/mixins' as m;
+@import '../../../sass/vars';
+
 .links {
   padding: 0.5em 0 0 1.5em;
   animation: slide-in 0.3s ease-out;
@@ -20,5 +23,6 @@
     position: absolute;
     width: max-content;
     padding: 0.5em 0;
+    @include m.blur(rgba($color-black, 0.6), 100rem);
   }
 }

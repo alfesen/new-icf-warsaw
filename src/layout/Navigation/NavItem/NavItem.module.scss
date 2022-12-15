@@ -19,16 +19,6 @@
   }
 }
 
-@keyframes slide-in {
-  from {
-    translate: -50%;
-  }
-
-  to {
-    translate: 0;
-  }
-}
-
 @media (min-width: 700px) {
   .item {
     position: relative;

@@ -1,13 +1,14 @@
 @use '../../sass/mixins' as m;
+@import '../../sass/vars';
 
 .logo {
   position: relative;
+  display: block;
   cursor: pointer;
   padding: 2em;
   z-index: 5;
   transition: scale 0.1s;
   height: max-content;
-  @include m.blur(6rem);
   &--img {
     width: 100%;
   }

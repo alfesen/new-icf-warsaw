@@ -4,6 +4,8 @@ import { useClientWidth } from '../../../hooks/useClientWidth'
 import NavDropdown from './NavDropdown'
 import s from './NavItem.module.scss'
 
+import { Fade } from 'react-awesome-reveal'
+
 type Props = {
   title: string
   links?: string[]
@@ -41,8 +43,10 @@ const NavItem = (props: Props) => {
     <li ref={ref} className={s.item}>
       {links ? (
         <Fragment>
+          <Fade>
           {dropdownMedia}
           {dropdownLinks}
+          </Fade>
         </Fragment>
       ) : (
         <a className={s.item__link} href={`/${titleQuery}`}>
