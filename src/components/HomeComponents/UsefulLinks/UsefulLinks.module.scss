@@ -2,8 +2,8 @@
 @import '../../../sass/vars';
 .links {
   width: 100%;
-  padding-top: 2em;
-  margin-top: 1em;
+  padding-top: 3em;
+  margin-top: $margin-section-sm;
   border-top: 1px solid $shadow;
 }
 
@@ -49,6 +49,8 @@
   .links {
     display: flex;
     justify-content: space-around;
+    margin-top: $margin-section-lg;
+    padding-top: 5em;
     .link {
       max-width: 40%;
       &:not(:last-child) {
