@@ -8,7 +8,7 @@ const MainHeading = () => {
         <span className={s['main-heading--primary']}>
           International Christian Fellowship
         </span>
-        <span className={s['main-heading--secondary']}>in Warsaw</span>
+        <span className={s['main-heading--secondary']}>of Warsaw</span>
       </h1>
     </Fragment>
   )

@@ -1,0 +1,9 @@
+@import '../../sass/vars';
+
+.footer {
+  background-color: $color-dark-grey;
+  padding: 1em 0em 2em;
+  &__social {
+    text-align: center;
+  }
+}

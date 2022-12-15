@@ -48,6 +48,7 @@
       scale: 0 1;
       transform-origin: left;
       transition: scale 0.2s;
+      z-index: -1;
     }
     &:hover::after {
       scale: 1;

@@ -1,3 +1,4 @@
+@use '../../../sass/mixins' as m;
 .links {
   padding: 0.5em 0 0 1.5em;
   animation: slide-in 0.3s ease-out;
@@ -20,5 +21,6 @@
     position: absolute;
     width: max-content;
     padding: 0.5em 0;
+    @include m.blur(100rem);
   }
 }

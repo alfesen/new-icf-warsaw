@@ -1,14 +1,17 @@
+import {Fragment} from 'react'
+import Footer from './layout/Footer/Footer'
 import Header from './layout/Header/Header'
 import Home from './pages/Home'
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Header />
       <main className='container'>
         <Home />
       </main>
-    </div>
+      <Footer />
+    </Fragment>
   )
 }
 
