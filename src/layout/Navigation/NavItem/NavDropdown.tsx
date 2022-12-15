@@ -1,21 +1,16 @@
 import s from './NavDropdown.module.scss'
+import { formatLink } from '../../../helpers/formatLink'
 
 const NavDropdown = ({ links }: { links: string[] }) => {
   const renderLinks =
     links &&
     links.map(link => {
-      const linkQuery = link
-        .trim()
-        .replaceAll('/', '')
-        .replaceAll('%', 'per')
-        .replaceAll('& ', '')
-        .replaceAll(' ', '-')
-        .toLowerCase()
+      const parsedLink = formatLink(link)
       return (
         <a
           className={s.link}
           key={`${link.replaceAll(' ', '')}_link`}
-          href={`/${linkQuery}`}>
+          href={`/${parsedLink}`}>
           {link}
         </a>
       )
