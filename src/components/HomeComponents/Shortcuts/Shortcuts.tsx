@@ -12,7 +12,7 @@ const Shortcuts = () => {
     { image: events, name: 'Upcoming events' },
     { image: group, name: 'Small groups' },
     { image: sermon, name: 'Sermons' },
-    { image: contact, name: 'Contact us' },
+    { image: contact, name: 'Contact' },
   ]
 
   const renderLinks = linksData.map(link => {
