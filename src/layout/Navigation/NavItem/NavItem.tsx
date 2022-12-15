@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { useOutsideClick } from '../../../hooks/useOutsideClick'
 import { useClientWidth } from '../../../hooks/useClientWidth'
+import { formatLink } from '../../../helpers/formatLink'
 import NavDropdown from './NavDropdown'
 import s from './NavItem.module.scss'
 
@@ -20,7 +21,7 @@ const NavItem = (props: Props) => {
 
   const { ref, visible, setVisible } = useOutsideClick(drop)
   const isDropped = drop ? '-' : `+`
-  const titleQuery = title.replaceAll(' ', '').toLowerCase()
+  const parsedLink = formatLink(title)
   const dropdownLinks = visible && links && <NavDropdown links={links} />
 
   const handleDrop = () => {
@@ -44,12 +45,12 @@ const NavItem = (props: Props) => {
       {links ? (
         <Fragment>
           <Fade>
-          {dropdownMedia}
-          {dropdownLinks}
+            {dropdownMedia}
+            {dropdownLinks}
           </Fade>
         </Fragment>
       ) : (
-        <a className={s.item__link} href={`/${titleQuery}`}>
+        <a className={s.item__link} href={`/${parsedLink}`}>
           {title}
         </a>
       )}
