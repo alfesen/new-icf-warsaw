@@ -18,6 +18,5 @@
     "noEmitOnError": true,
     "noUnusedLocals": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "declarations.d.ts"]
 }
