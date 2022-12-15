@@ -1,12 +1,18 @@
+@import '../../../sass/vars';
+
+.shortcuts {
+  margin: $margin-section-sm auto 0;
+}
+
 @media (min-width: 700px) {
   .shortcuts {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin: 3em auto;
+    margin-top: $margin-section-lg;
     justify-content: center;
     &__link {
-      margin: .8em;
+      margin: 0.8em;
       width: 45%;
     }
   }

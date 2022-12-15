@@ -26,7 +26,7 @@ const Shortcuts = () => {
     )
   })
 
-  return <div className={s.shortcuts}>{renderLinks}</div>
+  return <section className={s.shortcuts}>{renderLinks}</section>
 }
 
 export default Shortcuts
