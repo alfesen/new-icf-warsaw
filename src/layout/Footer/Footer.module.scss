@@ -45,5 +45,27 @@
 @media (min-width: 700px) {
   .footer {
     margin-top: $margin-section-lg;
+    &__essentials {
+      &--join {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+    &__logo {
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  .footer {
+    &__essentials {
+      &--address {
+        font-size: $font-md;
+      }
+    }
   }
 }
