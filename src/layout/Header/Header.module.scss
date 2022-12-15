@@ -10,8 +10,8 @@
   background-repeat: no-repeat;
   &__logo {
     width: 10rem;
+    @include m.blur($color-black, 6rem);
   }
-  
 }
 
 @media (min-width: 700px) {

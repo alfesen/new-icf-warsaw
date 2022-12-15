@@ -71,7 +71,7 @@
     max-width: 700px;
     background: none;
     font-size: 1.4rem;
-    @include m.blur(6rem);
+    @include m.blur($color-black, 6rem);
     &__list {
       display: flex;
       align-items: center;
