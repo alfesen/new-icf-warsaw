@@ -30,8 +30,6 @@ const Navigation = () => {
   const giveLinks = ['Giving to ICF', '1%', 'Missionaries']
   const contactLinks = ['Contact', 'Facebook', 'Instagram']
 
-  // PRZEKAŻ PROPSA Z BURGERA ŻEBY OTWIERAĆ NAV Z SETISACTIVE
-
   const toggleNavigation = (isActive: boolean) => {
     setIsActive(is => (isActive === true ? true : false))
   }
@@ -49,7 +47,12 @@ const Navigation = () => {
           <NavItem title='Sermons' />
           <NavItem title='Contact' links={contactLinks} />
           <li>
-            <a target="_blank" className={`btn ${s['btn--nav']}`} href='https://www.youtube.com/@icfwarsaw4803'>Recordings</a>
+            <a
+              target='_blank'
+              className={`btn ${s['btn--nav']}`}
+              href='https://www.youtube.com/@icfwarsaw4803'>
+              Recordings
+            </a>
           </li>
         </ul>
       </nav>
