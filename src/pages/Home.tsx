@@ -10,18 +10,14 @@ import { Fade } from 'react-awesome-reveal'
 const Home = () => {
   return (
     <Fragment>
-      <div className={s.home__top}>
-        <Fade direction='left' triggerOnce={true}>
+      <Fade direction='up' triggerOnce={true} damping={0.1}>
+        <div className={s.home__top}>
           <Welcome />
-        </Fade>
-        <Fade direction='left' triggerOnce={true}>
           <Announcements />
-        </Fade>
-      </div>
-      <Fade direction='left' triggerOnce={true}>
+        </div>
         <Shortcuts />
       </Fade>
-      <Fade direction='left' triggerOnce={true}>
+      <Fade delay={550}>
         <UsefulLinks />
       </Fade>
     </Fragment>
