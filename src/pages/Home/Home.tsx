@@ -1,10 +1,10 @@
 import s from './Home.module.scss'
 
-import Announcements from '../components/HomeComponents/Announcements/Announcements'
-import Welcome from '../components/HomeComponents/Welcome/Welcome'
+import Announcements from '../../components/HomeComponents/Announcements/Announcements'
+import Welcome from '../../components/HomeComponents/Welcome/Welcome'
 import { Fragment } from 'react'
-import Shortcuts from '../components/HomeComponents/Shortcuts/Shortcuts'
-import UsefulLinks from '../components/HomeComponents/UsefulLinks/UsefulLinks'
+import Shortcuts from '../../components/HomeComponents/Shortcuts/Shortcuts'
+import UsefulLinks from '../../components/HomeComponents/UsefulLinks/UsefulLinks'
 import { Fade } from 'react-awesome-reveal'
 
 const Home = () => {
