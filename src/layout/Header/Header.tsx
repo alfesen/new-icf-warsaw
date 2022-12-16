@@ -1,20 +1,35 @@
-
-import Navigation from '../Navigation/Navigation'
+import { useState, useEffect } from 'react'
 import s from './Header.module.scss'
 
-import bigCat from '../../assets/cat-4218424_1920.jpg'
 import Logo from '../../UI/Logo/Logo'
+import Navigation from '../Navigation/Navigation'
 import MainHeading from './MainHeading/MainHeading'
 import Shadow from '../../UI/Shadow/Shadow'
 
-const Header = ({image}: {image?: string}) => {
-  
+import welcome from '../../assets/images/headers/welcome-lg.jpg'
+import sermon from '../../assets/images/headers/sermons.jpg'
+import bigCat from '../../assets/cat-4218424_1920.jpg'
+
+const Header = () => {
+  const [headerImage, setHeaderImage] = useState('')
+
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case '/welcome-location':
+        setHeaderImage(welcome)
+        break
+      case '/sermons':
+        setHeaderImage(sermon)
+        break
+      default:
+        setHeaderImage(bigCat)
+    }
+  })
+
   return (
     <div
       style={{
-        backgroundImage: `url(${image ? image : bigCat})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundImage: `url(${headerImage})`,
       }}
       className={s.header}>
       <Shadow />
