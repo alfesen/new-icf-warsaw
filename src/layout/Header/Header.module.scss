@@ -9,7 +9,7 @@
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: top right;
   &__logo {
     width: 10rem;
     @include m.blur($color-black, 6rem);
