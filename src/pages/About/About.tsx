@@ -1,6 +1,10 @@
+// import SideNavigation from "../../layout/SideNavigation/SideNavigation"
+
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      {/* <SideNavigation  /> */}
+    </div>
   )
 }
 
