@@ -15,7 +15,7 @@ const Header = () => {
 
   useEffect(() => {
     switch (window.location.pathname) {
-      case '/welcome-location':
+      case '/about/welcome-location':
         setHeaderImage(welcome)
         break
       case '/sermons':

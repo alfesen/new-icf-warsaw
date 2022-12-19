@@ -22,7 +22,7 @@ const NavItem = (props: Props) => {
   const { ref, visible, setVisible } = useOutsideClick(drop)
   const isDropped = drop ? '-' : `+`
   const parsedLink = formatLink(title)
-  const dropdownLinks = visible && links && <NavDropdown links={links} />
+  const dropdownLinks = visible && links && <NavDropdown links={links} collectionTitle={title} />
 
   const handleDrop = () => {
     setVisible(drop => !drop)

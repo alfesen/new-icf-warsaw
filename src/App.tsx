@@ -4,6 +4,7 @@ import Header from './layout/Header/Header'
 import Home from './pages/Home/Home'
 import Sermons from './pages/Sermons/Sermons'
 import Footer from './layout/Footer/Footer'
+import About from './pages/About/About'
 
 function App() {
  
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path='/sermons'>
             <Sermons />
+          </Route>
+          <Route exact path='/about/:pageTitle'>
+            <About />
           </Route>
         </Switch>
       </main>
