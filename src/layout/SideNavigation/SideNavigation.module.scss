@@ -28,3 +28,31 @@
     font-weight: 600;
   }
 }
+
+@media (min-width: 700px) {
+  .aside {
+    width: 35%;
+    max-width: 30rem;
+
+    &__button {
+      display: none;
+    }
+  }
+
+  .link {
+    display: block;
+    text-align: left;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .aside {
+    width: 30%;
+    max-width: 30rem;
+  }
+
+  .link {
+    font-size: 1.6rem;
+  }
+}

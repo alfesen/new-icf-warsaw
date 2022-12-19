@@ -18,14 +18,13 @@ const SideNavigation = ({
     const formattedLink = formatLink(link)
     const formattedTitle = formatLink(collectionTitle)
     return (
-      <Fade key={`${formattedLink}_key_${Math.random()}`}>
-        <NavLink
-          className={`${s.link} ${showNav ? s.show : ''}`}
-          activeClassName={s.active}
-          to={`/${formattedTitle}/${formattedLink}`}>
-          {link}
-        </NavLink>
-      </Fade>
+      <NavLink
+        key={`${formattedLink}_key_${Math.random()}`}
+        className={`${s.link} ${showNav ? s.show : ''}`}
+        activeClassName={s.active}
+        to={`/${formattedTitle}/${formattedLink}`}>
+        {link}
+      </NavLink>
     )
   })
 
@@ -37,14 +36,14 @@ const SideNavigation = ({
   }
 
   return (
-    <Card>
-      <aside className={s.aside}>
+    <Fade triggerOnce>
+      <Card className={s.aside}>
         <button onClick={toggleNavigation} className={s.aside__button}>
           <span>{buttonSymbol}</span> {buttonText} navigation
         </button>
         {renderLinks}
-      </aside>
-    </Card>
+      </Card>
+    </Fade>
   )
 }
 
