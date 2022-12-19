@@ -6,29 +6,41 @@ import NavItem from './NavItem/NavItem'
 const Navigation = () => {
   const [isActive, setIsActive] = useState(false)
 
-  const aboutUsLinks = [
-    'Welcome & location',
-    'Our pastors and staff',
-    'What to expect',
-    'What we believe',
-    'EU Regulation 2016/79',
-    'Privacy Policy & RODO',
-    'Leadership team',
-    'Ministry leaders',
-  ]
-  const churchLifeLinks = [
-    'Upcoming events',
-    'Small groups',
-    'ICF Kids',
-    'Young adults',
-    'Women',
-    'Men',
-    'Sermon Archives',
-    'ICF Library',
-    'Daily Hope',
-  ]
-  const giveLinks = ['Giving to ICF', '1%', 'Missionaries']
-  const contactLinks = ['Contact', 'Facebook', 'Instagram']
+  const about = {
+    title: 'About',
+    links: [
+      'Welcome & location',
+      'Our pastors and staff',
+      'What to expect',
+      'What we believe',
+      'EU Regulation 2016/79',
+      'Privacy Policy & RODO',
+      'Leadership team',
+      'Ministry leaders',
+    ],
+  }
+  const churchLife = {
+    title: 'Church Life',
+    links: [
+      'Upcoming events',
+      'Small groups',
+      'ICF Kids',
+      'Young adults',
+      'Women',
+      'Men',
+      'Sermon Archives',
+      'ICF Library',
+      'Daily Hope',
+    ],
+  }
+  const give = {
+    title: 'Give',
+    links: ['Giving to ICF', '1%', 'Missionaries'],
+  }
+  const contact = {
+    title: 'Contact',
+    links: ['Contact', 'Facebook', 'Instagram'],
+  }
 
   const toggleNavigation = (isActive: boolean) => {
     setIsActive(is => (isActive === true ? true : false))
@@ -41,11 +53,11 @@ const Navigation = () => {
       </div>
       <nav className={`${s.navigation} ${isActive ? s.show : ''}`}>
         <ul className={s.navigation__list}>
-          <NavItem title='About us' links={aboutUsLinks} />
-          <NavItem title='Church Life' links={churchLifeLinks} />
-          <NavItem title='Give' links={giveLinks} />
+          <NavItem title={about.title} links={about.links} />
+          <NavItem title={churchLife.title} links={churchLife.links} />
+          <NavItem title={give.title} links={give.links} />
           <NavItem title='Sermons' />
-          <NavItem title='Contact' links={contactLinks} />
+          <NavItem title={contact.title} links={contact.links} />
           <li>
             <a
               target='_blank'
