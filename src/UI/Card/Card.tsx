@@ -1,7 +1,7 @@
 import s from './Card.module.scss'
 
 type Props = {
-  className: string
+  className?: string
   children: React.ReactNode
 }
 
