@@ -6,7 +6,7 @@ import { Fade } from 'react-awesome-reveal'
 
 const Welcome = () => {
   return (
-    <Fade className={s.welcome}>
+    <Fade triggerOnce className={s.welcome}>
       <SectionHeading text='Welcome' />
       <Paragraphs text={aboutWelcome} />
     </Fade>
