@@ -2,6 +2,9 @@
 
 .welcome {
   max-width: 70rem;
+  &__heading {
+    text-align: center;
+  }
   &__text {
     color: $color-light-grey;
     font-size: $font-sm;

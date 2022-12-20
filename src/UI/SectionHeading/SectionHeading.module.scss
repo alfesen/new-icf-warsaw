@@ -1,0 +1,14 @@
+@import '../../sass/vars';
+
+.heading {
+  margin: 1em auto;
+  font-size: $font-secondary-header-sm;
+  color: $color-dark-grey;
+}
+
+@media (min-width: 700px) {
+  .heading {
+    margin: 0 0 1em 0;
+    font-size: $font-secondary-header-md;
+  }
+}
