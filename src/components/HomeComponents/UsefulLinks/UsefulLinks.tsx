@@ -6,7 +6,7 @@ import UsefulLink from '../../../UI/UsefulLink/UsefulLink'
 const UsefulLinks = () => {
   return (
     <div className={s.links}>
-      <UsefulLink url='/welcome-location' text='Where we are' image={map} />
+      <UsefulLink url='/about/welcome-location' text='Where we are' image={map} />
       <UsefulLink url='/givingtoicf' text='Giving to ICF' image={donate} />
     </div>
   )
