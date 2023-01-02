@@ -1,16 +1,18 @@
+import { useState, Fragment } from 'react'
 import s from './SideNavigation.module.scss'
 import { NavLink } from 'react-router-dom'
 import { formatLink } from '../../helpers/formatLink'
-import { useState } from 'react'
 import Card from '../../UI/Card/Card'
 import { Fade } from 'react-awesome-reveal'
 
 const SideNavigation = ({
   links,
   collectionTitle,
+  title
 }: {
   links: string[]
   collectionTitle: string
+  title?: string
 }) => {
   const [showNav, setShowNav] = useState(false)
 
@@ -41,7 +43,10 @@ const SideNavigation = ({
         <button onClick={toggleNavigation} className={s.aside__button}>
           <span>{buttonSymbol}</span> {buttonText} navigation
         </button>
+        <Fragment>
+        <h3 className={s.aside__title}>{title ? title : collectionTitle}</h3>
         {renderLinks}
+        </Fragment>
       </Card>
     </Fade>
   )
