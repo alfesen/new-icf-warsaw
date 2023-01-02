@@ -39,9 +39,6 @@ h3 {
   color: $color-dark-grey;
   font-size: $font-tertiary-header-sm;
   text-align: center;
-  &:not(:last-child) {
-    margin-bottom: 1em;
-  }
 }
 
 h2 {

@@ -14,7 +14,11 @@ import MinistryLeaders from './subpages/MinistryLeaders/MinistryLeaders'
 const About = () => {
   return (
     <div className={s.about}>
-      <SideNavigation collectionTitle={about.title} links={about.links} />
+      <SideNavigation
+        collectionTitle={about.title}
+        title='About Us'
+        links={about.links}
+      />
       <section className={s.about__section}>
         <Switch>
           <Route path='/about/welcome-location'>

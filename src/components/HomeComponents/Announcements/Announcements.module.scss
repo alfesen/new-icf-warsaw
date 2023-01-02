@@ -8,6 +8,11 @@
   margin-top: $margin-section-sm;
   text-align: center;
   padding: 3em;
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
 }
 
 @media (min-width: 900px) {
